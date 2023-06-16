@@ -1,17 +1,16 @@
 package org.Bref;
 
-import org.Bref.Graphics.*;
+import org.Bref.Client.Client;
+import org.Bref.Tcp.TcpClient;
+import org.Bref.Tcp.TcpServer;
 
-import javax.swing.*;
-import java.awt.*;
-
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-        MyFrame frame1 = new MyFrame();
-        frame1.setVisible(true);
-        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        TcpClient client1 = new TcpClient();
+        client1.connect("1270.0.0.1", 9600);
+
     }
 }
 
